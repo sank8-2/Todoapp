@@ -3,7 +3,7 @@ using Project1.Models.Repositories;
 using Project1.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BethanysPieShopAdmin.Controllers
+namespace Project1.Controllers
 {
     public class OrderController : Controller
     {
@@ -49,3 +49,4 @@ namespace BethanysPieShopAdmin.Controllers
         }
     }
 }
+

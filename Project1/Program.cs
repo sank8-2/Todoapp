@@ -8,11 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<TodoContext>(opt =>
     opt.UseInMemoryDatabase("TodoList"));
 
 builder.Services.AddDbContext<PieShopDbContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("BethanysPieShopDbContextConnection")));
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
